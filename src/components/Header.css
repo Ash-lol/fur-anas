@@ -1,19 +1,25 @@
 /* src/components/Header.css */
-header {
-    background-color: #16213e;
-    color: #eaeaea;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  h1 {
-    font-style: italic;
-    font-weight: bold;
-    color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  }
-  
-  .highlight {
-    color: #ff6f61;
-  }
-  
+
+header h1 {
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  color: #FBE3D0; /* Light Background */
+  text-shadow: 
+    -1px -1px 0 #A23438,  /* Primary Red */
+    1px -1px 0 #A23438,
+    -1px  1px 0 #A23438,
+    1px  1px 0 #A23438; /* Creates the stroke effect */
+}
+
+header h1 span,
+header h1 img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.inline-image {
+  height: 2em; /* Match the font size */
+  margin: 0 0.2em; /* Adjust spacing as needed */
+  object-fit: contain; /* Ensure the image maintains its aspect ratio */
+}

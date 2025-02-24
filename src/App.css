@@ -1,68 +1,96 @@
 /* src/App.css */
+
 body {
-  font-family: 'Playfair Display', Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #1a1a2e;
-  color: #eaeaea;
+  background-color: #FBE3D0; /* Light Background */
+  color: #1D1E27; /* Dark Text */
+  overflow: auto;
+  position: relative;
+}
+
+header {
+  background-color: #A23438; /* Primary Red */
+  color: #FBE3D0; /* Light Background */
+  padding: 20px;
+  text-align: center;
 }
 
 nav {
   display: flex;
   justify-content: center;
   gap: 15px;
-  background-color: #0f3460;
+  background-color: #BB5E61; /* Secondary Red */
   padding: 10px;
 }
 
-nav button {
-  background: none;
-  border: none;
-  color: #eaeaea;
+nav a {
+  text-decoration: none;
+  color: #FBE3D0; /* Light Background */
   font-weight: bold;
-  cursor: pointer;
 }
 
-nav button:hover {
-  color: #ff6f61;
+nav a:hover {
+  color: #FF6F61; /* Accent Red */
+}
+
+.page {
+  display: none;
+  padding: 20px;
+}
+
+.page.active {
+  display: block;
+}
+
+.joke {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #BB5E61; /* Secondary Red */
+  border-radius: 5px;
+  background-color: #FBE3D0; /* Light Background */
+  color: #1D1E27; /* Dark Text */
 }
 
 .spinner {
+  display: none;
   margin: 20px auto;
-  border: 4px solid #ddd;
-  border-top: 4px solid #ff6f61;
+  border: 4px solid #BB5E61; /* Secondary Red */
+  border-top: 4px solid #FF6F61; /* Accent Red */
   border-radius: 50%;
   width: 30px;
   height: 30px;
   animation: spin 1s linear infinite;
 }
 
-.play-button {
-  font-size: 24px;
-  padding: 10px 20px;
-  cursor: pointer;
-  background-color: #ff6f61;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  margin: 20px;
-}
-
-.video-player {
-  width: 100%;
-  max-width: 800px;
-  margin: 20px auto;
+video {
+  max-width: 100%;
+  height: auto;
   display: block;
-  border: 1px solid #ddd;
+  margin: 20px auto;
+  border: 1px solid #BB5E61; /* Secondary Red */
   border-radius: 5px;
+  background-color: #FBE3D0; /* Light Background */
 }
-
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+h1 {
+  font-family: 'Arial', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  color: #FBE3D0; /* Light Background */
+  text-shadow: 
+    -1px -1px 0 #A23438,  /* Primary Red */
+    1px -1px 0 #A23438,
+    -1px  1px 0 #A23438,
+    1px  1px 0 #A23438; /* Creates the stroke effect */
+}
+
+.highlight {
+  color: #FF6F61; /* Accent Red */
 }
