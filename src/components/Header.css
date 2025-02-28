@@ -19,7 +19,14 @@ header h1 img {
 }
 
 .inline-image {
-  height: 2em; /* Match the font size */
+  height: 2.4em; /* Match the font size */
   margin: 0 0.2em; /* Adjust spacing as needed */
   object-fit: contain; /* Ensure the image maintains its aspect ratio */
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #E6C9A8; /* Warm beige/golden brown - soft and elegant */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }

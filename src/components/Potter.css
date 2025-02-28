@@ -1,0 +1,28 @@
+.potter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .potter-image {
+    width: 300px; /* Adjust as needed */
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  

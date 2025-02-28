@@ -5,11 +5,11 @@ import './Header.css';
 const Header = () => (
   <header>
     <h1>
-      Pranay
+      Happy
       <img src={`${process.env.PUBLIC_URL}/storage/bihrtday.jpg`} alt="Birthday" className="inline-image" />
-      Signature
+       Anastasia!!
     </h1>
-    <p>Where humor meets tech!</p>
+    <p>WOOHOOOO! Wish you an amazing year ahead!</p>
   </header>
 );
 
