@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/fur-anas/static/css/main.18ebe4d7.css",
+    "main.js": "/fur-anas/static/js/main.30e221f7.js",
+    "static/js/453.e50c7a79.chunk.js": "/fur-anas/static/js/453.e50c7a79.chunk.js",
+    "index.html": "/fur-anas/index.html",
+    "main.18ebe4d7.css.map": "/fur-anas/static/css/main.18ebe4d7.css.map",
+    "main.30e221f7.js.map": "/fur-anas/static/js/main.30e221f7.js.map",
+    "453.e50c7a79.chunk.js.map": "/fur-anas/static/js/453.e50c7a79.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.18ebe4d7.css",
+    "static/js/main.30e221f7.js"
+  ]
+}
