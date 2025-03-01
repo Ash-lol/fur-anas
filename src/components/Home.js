@@ -1,10 +1,10 @@
 // src/components/Home.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import LoadingScreen1 from './LoadingScreen1';
+import LoadingScreen from './LoadingScreen';
 import './Home.css';
 
-const Home = ({ setShowConfetti }) => { // Receive setShowConfetti as a prop
+const Home = ({ setShowConfetti, onPick }) => { // Receive setShowConfetti as a prop
   const [isVideoVisible, setIsVideoVisible] = useState(false);
   const [isVideoEnded, setIsVideoEnded] = useState(false);
   const [loadingPage, setLoadingPage] = useState(null); // Track loading page
@@ -19,16 +19,25 @@ const Home = ({ setShowConfetti }) => { // Receive setShowConfetti as a prop
     setIsVideoEnded(true);
   };
 
+  const handleOptionClick = (e, option) => {
+    e.preventDefault();
+    onPick(option);
+  };
+
   // const navigateToPage = (page) => { 
   //   navigate(`/${page}`); // Use react-router's history to navigate
   // };
 
-  const navigateToPage = (page) => {
-    setLoadingPage(page); // Show loading screen
-  };
+  // const navigateToPage = (page) => {
+  //   setLoadingPage(page); // Show loading screen
+  //   setTimeout(() => {
+  //     onPick(page); // Navigate after loading
+  //   }, 3000);
+  // };
+  
 
   if (loadingPage) {
-    return <LoadingScreen1 targetPage={loadingPage} />;
+    return <LoadingScreen targetPage={loadingPage} />;
   }
 
   return (
@@ -62,10 +71,10 @@ const Home = ({ setShowConfetti }) => { // Receive setShowConfetti as a prop
         <div className="options-container">
           (Yes, I didn't make that video, I got it from here https://youtu.be/Vi5Wi3BWX7Q?si=PnSuwSPCTwJWbG3m)
           <h3>But choose one of these thingies below!</h3>
-          <button onClick={() => navigateToPage('Potter')} className="option-button potter">
+          <button onClick={(e) => handleOptionClick(e, 'H')} className="option-button potter">
             H
           </button>
-          <button onClick={() => navigateToPage('Dnote')} className="option-button dnote">
+          <button onClick={(e) => handleOptionClick(e, 'D')} className="option-button dnote">
             D
           </button>
         </div>

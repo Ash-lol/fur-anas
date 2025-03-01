@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LoadingScreen.css';
 
-const LoadingScreen1 = ({ targetPage }) => {
+const LoadingScreen = ({ targetPage }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -23,4 +23,4 @@ const LoadingScreen1 = ({ targetPage }) => {
   );
 };
 
-export default LoadingScreen1;
+export default LoadingScreen;
