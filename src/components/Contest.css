@@ -1,0 +1,26 @@
+.contest-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.images-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.contest-image {
+    width: 300px; /* Adjust as needed */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contest-text {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}

@@ -1,5 +1,5 @@
 // src/components/Home.js
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import LoadingScreen from './LoadingScreen';
 import './Home.css';
@@ -9,10 +9,19 @@ const Home = ({ setShowConfetti, onPick }) => { // Receive setShowConfetti as a 
   const [isVideoEnded, setIsVideoEnded] = useState(false);
   const [loadingPage, setLoadingPage] = useState(null); // Track loading page
   const navigate = useNavigate();
+  const [playbackRate, setPlaybackRate] = useState(1.0);
+  const videoRef = useRef(null);
 
   const handleButtonClick = () => {
     setIsVideoVisible(true);
     setTimeout(() => setShowConfetti(false), 5000);
+  };
+
+  const changePlaybackRate = (rate) => {
+    setPlaybackRate(rate);
+    if (videoRef.current) {
+      videoRef.current.playbackRate = rate;
+    }
   };
 
   const handleVideoEnd = () => {
@@ -53,19 +62,40 @@ const Home = ({ setShowConfetti, onPick }) => { // Receive setShowConfetti as a 
       )}
       {isVideoVisible && !isVideoEnded && (
         <div className="video-container">
-          <video
-            src={`${process.env.PUBLIC_URL}/storage/video.mp4`}
-            type="video/mp4"
-            autoPlay
-            onEnded={handleVideoEnd}
-            className="video-player"
+        <video
+          ref={videoRef}
+          src={`${process.env.PUBLIC_URL}/storage/video.mp4`}
+          type="video/mp4"
+          autoPlay
+          onEnded={handleVideoEnd}
+          className="video-player"
+        >
+          Your browser does not support the video tag.
+        </video>
+        <div className="video-controls">
+          <button 
+            onClick={() => changePlaybackRate(1.0)} 
+            className={`speed-button ${playbackRate === 1.0 ? 'active' : ''}`}
           >
-            Your browser does not support the video tag.
-          </video>
+            1x
+          </button>
+          <button 
+            onClick={() => changePlaybackRate(1.5)} 
+            className={`speed-button ${playbackRate === 1.5 ? 'active' : ''}`}
+          >
+            1.5x
+          </button>
+          <button 
+            onClick={() => changePlaybackRate(2.0)} 
+            className={`speed-button ${playbackRate === 2.0 ? 'active' : ''}`}
+          >
+            2x
+          </button>
           <button onClick={handleVideoEnd} className="skip-button">
             Skip The Video
           </button>
         </div>
+      </div>
       )}
       {isVideoEnded && (
         <div className="options-container">
