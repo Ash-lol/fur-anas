@@ -1,0 +1,46 @@
+.dnote-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dnote-image {
+    width: 280px; /* Default size */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Increase size for specific images */
+.row:first-child .image-container:nth-child(1) .dnote-image,
+.row:first-child .image-container:nth-child(2) .dnote-image,
+.row:nth-child(2) .image-container:nth-child(1) .dnote-image,
+.last-image .dnote-image {
+    width: 430px; /* Increased size */
+}
+
+/* Make the 4th image smaller */
+.row:nth-child(2) .image-container:nth-child(2) .dnote-image {
+    width: 300px; /* Adjust size here */
+}
+
+/* Center the last image */
+.last-image {
+    display: flex;
+    justify-content: center;
+}
