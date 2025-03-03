@@ -1,0 +1,39 @@
+.vicky-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.vicky-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.center-image {
+    display: flex;
+    justify-content: center;
+}
+
+.vicky-image {
+    width: 300px; /* Default size for side images */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.vicky-image-large {
+    width: 150px; /* Bigger size for the center image */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}

@@ -4,17 +4,11 @@ import { useLocation } from 'react-router-dom';
 import Confetti from 'react-confetti';
 import Header from './components/Header';
 import Home from './components/Home';
-import Potter from './components/Potter';
-import Dnote from './components/Dnote';
 import DynamicPage from './components/DynamicPage';
 import LoadingScreen from './components/LoadingScreen';
 import './App.css';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import EndingPage from './components/EndingPage';
-import Uia from './components/Uia';
-import Vicky from './components/Vicky';
-import Mii from './components/Mii';
-import Tangled from './components/Tangled';
 
 const App = () => {
   const location = useLocation(); // Get the current route
