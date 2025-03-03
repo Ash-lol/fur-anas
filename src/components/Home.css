@@ -136,6 +136,24 @@
   font-weight: bold;
 }
 
+.pause-button {
+  padding: 8px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+  min-width: 90px;
+}
+
+.pause-button:hover {
+  background-color: #2ecc71;
+}
+
+
+
 .skip-button {
   padding: 8px 15px;
   font-size: 16px;

@@ -9,6 +9,7 @@ const Home = ({ setShowConfetti, onPick }) => { // Receive setShowConfetti as a 
   const [isVideoEnded, setIsVideoEnded] = useState(false);
   const [loadingPage, setLoadingPage] = useState(null); // Track loading page
   const navigate = useNavigate();
+  const [isPaused, setIsPaused] = useState(false);
   const [playbackRate, setPlaybackRate] = useState(1.0);
   const videoRef = useRef(null);
 
@@ -21,6 +22,17 @@ const Home = ({ setShowConfetti, onPick }) => { // Receive setShowConfetti as a 
     setPlaybackRate(rate);
     if (videoRef.current) {
       videoRef.current.playbackRate = rate;
+    }
+  };
+
+  const togglePause = () => {
+    if (videoRef.current) {
+      if (isPaused) {
+        videoRef.current.play();
+      } else {
+        videoRef.current.pause();
+      }
+      setIsPaused(!isPaused);
     }
   };
 
@@ -73,6 +85,12 @@ const Home = ({ setShowConfetti, onPick }) => { // Receive setShowConfetti as a 
           Your browser does not support the video tag.
         </video>
         <div className="video-controls">
+          <button 
+            onClick={togglePause} 
+            className="pause-button"
+          >
+            {isPaused ? "▶ Play" : "⏸️ Pause"}
+          </button>
           <button 
             onClick={() => changePlaybackRate(1.0)} 
             className={`speed-button ${playbackRate === 1.0 ? 'active' : ''}`}
