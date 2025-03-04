@@ -51,7 +51,7 @@ const Mii = () => {
           />
         ))}
       </div>
-      <p className="mii-text">Mii Channel Vibes! 🎮</p>
+      <p className="mii-text">Mii Anas and Mii Pra are such a serotonin boost. And Anas, welcome to 23 haha :D 🤝 May your 23 be even more awesome, with a lot of fun and fulfillment!</p>
 
       <audio ref={audioRef} loop>
         <source src={`${process.env.PUBLIC_URL}/storage/mii.mp3`} type="audio/mp3" />

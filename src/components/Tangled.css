@@ -24,6 +24,8 @@
     font-size: 1.5rem;
     font-weight: bold;
     color: #333;
+    padding-left: 90px;
+    padding-right: 90px;
 }
 
 .audio-button {

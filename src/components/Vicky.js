@@ -4,7 +4,6 @@ import './Vicky.css'; // Import CSS for styling
 const Vicky = () => {
   return (
     <div className="vicky-container">
-      <p className="vicky-text">Vicky's Grand Showcase! 🌟</p>
       
       <div className="row">
         <img src={`${process.env.PUBLIC_URL}/storage/vicky.jpg`} alt="Vicky 1" className="vicky-image" />
@@ -19,6 +18,11 @@ const Vicky = () => {
         <img src={`${process.env.PUBLIC_URL}/storage/maya.jpg`} alt="Vicky 4" className="vicky-image" />
         <img src={`${process.env.PUBLIC_URL}/storage/maya2.jpg`} alt="Vicky 5" className="vicky-image" />
       </div>
+
+      <p className="vicky-text"> The little Anas in you must be amazed by you. Keep making her proud as always! 🌟</p>
+      <p className="vicky-text"> Oh and, keep your creativity shining! It's of a rare kind XD</p>
+
+
     </div>
   );
 };

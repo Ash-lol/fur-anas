@@ -16,7 +16,7 @@ const Contest = () => {
           className="contest-image" 
         />
       </div>
-      <p className="contest-text">May your Drewms that you're working towards, come true!</p>
+      <p className="contest-text">May the Drewms that you're working towards, all come true!</p>
       <p>I know you are more than capable of reaching them and beyond 😌</p>
     </div>
   );

@@ -5,42 +5,78 @@
     text-align: center;
     margin-top: 50px;
     gap: 20px;
-}
-
-.row {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .row {
     display: flex;
     justify-content: center;
     gap: 20px;
-}
-
-.image-container {
+    width: 100%;
+  }
+  
+  .image-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.dnote-image {
-    width: 280px; /* Default size */
+  }
+  
+  .dnote-image {
+    width: 280px;
     height: auto;
     border-radius: 12px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-}
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .dnote-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .first-row-image {
+    width: 500px;
+  }
+  
+  .second-image {
+    width: 380px; /* Made slightly smaller as requested */
+  }
 
-/* Increase size for specific images */
-.row:first-child .image-container:nth-child(1) .dnote-image,
-.row:first-child .image-container:nth-child(2) .dnote-image,
-.row:nth-child(2) .image-container:nth-child(1) .dnote-image,
-.last-image .dnote-image {
-    width: 430px; /* Increased size */
-}
-
-/* Make the 4th image smaller */
-.row:nth-child(2) .image-container:nth-child(2) .dnote-image {
-    width: 300px; /* Adjust size here */
-}
-
-/* Center the last image */
-.last-image {
-    display: flex;
-    justify-content: center;
-}
+  .third-image{
+    width: 450px;
+  }
+  
+  .smaller-image {
+    width: 300px;
+  }
+  
+  .image-caption {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .row-caption {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: bold;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .dnote-image,
+    .first-row-image,
+    .second-image,
+    .smaller-image {
+      width: 100%;
+      max-width: 400px;
+    }
+  }

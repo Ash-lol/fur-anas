@@ -46,8 +46,7 @@ const Tangled = () => {
           />
         ))}
       </div>
-      <p className="tangled-text">Flynn and Rapunzel's Epic Moments! ✨</p>
-
+      <p className="tangled-text">One of the things that I particularly admire about you is your willingness to go out of your comfort zone and try new things. I would be lying if I said it didn't rub off on me 🐰</p>
       <audio ref={audioRef} loop>
         <source src={`${process.env.PUBLIC_URL}/storage/tripledent.mp3`} type="audio/mp3" />
         Your browser does not support the audio element.
